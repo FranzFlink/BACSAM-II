@@ -20,7 +20,45 @@ The **BACSAM-II** data is organized into three main categories:
         /ar
     /observations
         /raw
+            /polar6
+                /noseboom
+                    /1hz
+                        Flight_YYYYMMDD_P6_XX_1Hz.asc
+                    /100hz
+                        Flight_YYYYMMDD_P6_XX_100Hz.asc
+                /radiation_kt19
+                        BACSAM2_BBR_RFXX.dat
+                /aerosol
+                /fisheye
+            /t-bird
+                /noseboom
+                    /1hz
+                        Flight_YYYYMMDD_TB_XX_1Hz_tb.asc
+                    /100hz
+                        Flight_YYYYMMDD_TB_XX_100Hz_tb.asc
+                /aerosol
+            /buoys
+            /satellite
+                /modis
+                    /mod29
+                        MOD29E1D_AYYYYJJ_*_*_MOD_Grid_Seaice_4km_North_Ice_Surface_Temperature_NP_*.tif # J is the Julian day
+                    /mod021
+                        MOD021KM.AYYYYJJ.HHMM.*.*.hdf
+
+                /sentinel-2
         /processed
+            /polar6_unified
+                noseboom_unified.nc
+                radiation_kt19_unified.nc
+                aerosol_unified.nc
+                fisheye_unified.mp4 # a low-res video file of all fisheye images combined
+            /t-bird_unified
+                noseboom_unified.nc
+                aerosol_unified.nc
+            /buoys_unified
+            /satellite_unified
+                modis_unified.nc    # optimally already on the same grid as sentinel-2
+                sentinel2_unified.nc
         /ar
     /reanalysis
         /raw
