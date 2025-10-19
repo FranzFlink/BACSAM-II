@@ -106,6 +106,30 @@ The code is divided into distinct directories for clarity and reproducibility.
 - TODO:
     - Define naming conventions for files in each data folder.
     - Create templates for notebooks and scripts to ensure consistency.
-    - NAMING CONVENTIONS FOR SCRIPTS AND NOTEBOOKS!!! 
+        - NAMING CONVENTIONS FOR SCRIPTS AND NOTEBOOKS!!! 
 ---
+
+## Repository contents (concise)
+
+Below is a short, file/folder-level listing of what's in this repository with a one-line description for each entry. It matches the workspace snapshot and keeps the descriptions minimal and factual.
+
+- `book/` — Jupyter Book sources; contains notebooks used for documentation and analysis.
+    - `book/notebooks/data_analysis/buoy_modis.ipynb` — Notebook that compares buoy observations with MODIS satellite data (regridding and bias maps).
+    - `book/notebooks/processing/` — Example processing notebooks (demonstrations and helpers).
+
+- `data/` — All datasets (raw, processed, reanalysis). Organized into `model_output`, `observations`, `reanalysis` with `raw`/`processed`/`ar` subfolders.
+
+- `legacy/` — Older scripts, notebooks, raw notes and example runs from prior work (useful references; not necessarily production-ready).
+
+- `lib/` — Small python libraries used across notebooks and scripts (e.g., `custom_style_lib.py` for plotting styles).
+
+- `scripts/` — Main runnable scripts organized by purpose:
+    - `scripts/processing/` — Data processing scripts (convert raw → processed, preprocessing). Example: `sentinel-2_download_and_process.py` (Earth Engine-based download + processing).
+    - `scripts/` — Small utilities and analysis scripts (e.g., `profile.py`, `sim_solar.py`).
+
+- `README.md` — This file: high-level overview and notes about structure, dependencies and TODOs.
+
+Notes:
+- Every top-level folder above contains multiple files and subfolders; consult those folders for per-file details. The `book/notebooks/data_analysis/buoy_modis.ipynb` notebook uses `xarray`, `xesmf`, and `pandas` and demonstrates regridding buoy observations to MODIS grid and computing bias maps.
+- For runnable scripts that call cloud CLIs (e.g., Earth Engine / `gcloud`), prefer the notebook/web authentication fallback or a service-account workflow when running on headless systems.
 
