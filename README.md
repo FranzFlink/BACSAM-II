@@ -16,24 +16,26 @@ The **BACSAM-II** data is organized into three main categories:
 /data
     /model_output
         /raw
+            /libradtran
+            /arome_forecast
         /processed
         /ar
     /observations
         /raw
             /polar6
+                /mastertracks
+                    P6-247_BACSAM2_YYYY_YYYYMMDD*_mastertrack.tab
                 /noseboom
                     /1hz
-                        Flight_YYYYMMDD_P6_XX_1Hz.asc
+                        Flight_YYYYMMDD_P6_*_1Hz.asc
                     /100hz
-                        Flight_YYYYMMDD_P6_XX_100Hz.asc
+                        Flight_YYYYMMDD_P6_*_100Hz.asc
                 /radiation_kt19
                         BACSAM2_BBR_RFXX.dat
                 /aerosol
                 /fisheye
             /t-bird
                 /noseboom
-                    /1hz
-                        Flight_YYYYMMDD_TB_XX_1Hz_tb.asc
                     /100hz
                         Flight_YYYYMMDD_TB_XX_100Hz_tb.asc
                 /aerosol
@@ -48,6 +50,7 @@ The **BACSAM-II** data is organized into three main categories:
                 /sentinel-2
         /processed
             /polar6_unified
+                mastertracks_unified.nc
                 noseboom_unified.nc
                 radiation_kt19_unified.nc
                 aerosol_unified.nc
